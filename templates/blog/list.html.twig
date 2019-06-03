@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Blogangular</title>
+    <base href="/">
+    <link rel="stylesheet" href="/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("topmenu").style.height = "40px";
+                var x = document.getElementsByClassName("toplink");
+                var i;
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.padding = "16px 18px 18px 18px";
+                }
+                document.getElementById("mainlogo").style.display = "none";
+
+            } else {
+                document.getElementById("topmenu").style.height = "88px";
+                var x = document.getElementsByClassName("toplink");
+                var i;
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.padding = "50px 18px 24px 18px";
+                }
+                document.getElementById("mainlogo").style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body style="margin:0">
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- top menu -->
+
+<div id="topmenu">
+    <div id="topmenumain">
+
+        <div id="menu">
+            <ul>
+                <li><a class="toplink" href="#">HOME</a></li>
+                <li><a class="toplink" href="#">BLOG</a></li>
+                <li><a class="toplink" href="#">PORTFOLIO</a></li>
+                <li><a class="toplink" href="#">VIDEOCASE</a></li>
+                <li><a class="toplink" href="#">FEATURES</a></li>
+                <li><a class="toplink" href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!-- //top menu -->
+
+
+<div id="maincontent">
+    <div class="innercontent">
+
+        <div class="card" >
+            <div class="image">
+            </div>
+            <div class="content">
+                <h3>Nějaký název</h3>
+                <p>Morbi leo risus, porta ac consectetur at eros. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, porttitor ligula, eget lacinia odio sem nec elit. </p>
+                <div class="footer">
+                    <div class="date">5 May 2019</div>
+                    <div class="chatico">3</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="clear"></div>
+
+
+    </div>
+    <div id="buttonolderposts"><input type="button" value="Older posts" class="button" /></div>
+</div>
+
+<div id="footer">
+    <div class="footerinner">
+        <div class="popularposts">
+            <h3>Popular posts</h3>
+            <div class="post">
+                <p>Vivamus sagittis lacus vel augue laoreet rutrum dolor auctor.</p>
+                <div class="footerdate">5 May 2019</div>
+            </div>
+            <div class="post second">
+                <p>bls b sbjs jodfjs ojosbj ofjbs</p>
+                <div class="footerdate">5 May 2019</div>
+            </div>
+            <div class="post second">
+                <p>Vivamus sagittis lacus vel augue laoreet rutrum dolor auctor.</p>
+                <div class="footerdate">5 May 2019</div>
+            </div>
+        </div>
+        <div class="twiterposts">
+            <h3>Twitter</h3>
+            <div class="post">
+                <p>bls b sbjs jodfjs ojosbj ofjbs</p>
+                <div class="footerdate">5 May 2019</div>
+            </div>
+            <div class="post second">
+                <p>bls b sbjs jodfjs ojosbj ofjbs</p>
+                <div class="footerdate">5 May 2019</div>
+            </div>
+            <div class="post second">
+                <p>bls b sbjs jodfjs ojosbj ofjbs</p>
+                <div class="footerdate">5 May 2019</div>
+            </div>
+        </div>
+        <div class="aboutme">
+            <h3>Little about me</h3>
+            <div class="post">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+
+                <p>Donec id elit non porta gravida at eget metus. Nullam quis risus eget urna mollis ornare vel.</p>
+            </div>
+        </div>
+        <div id="contactform" >
+            <h3>Contact me</h3>
+            <form>
+                <input type="text" />
+                <input type="text" />
+                <textarea></textarea>
+                <input type="submit" value="submit"/>
+                <div class="clear"></div>
+            </form>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div id="bottomfooter">
+
+</div>
+
+</body>
+</html>

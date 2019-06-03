@@ -1,0 +1,64 @@
+{% extends 'admin/index.html.twig' %}
+{% block body %}
+
+
+
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <i class="fa fa-edit fa-fw "></i>
+            Články
+             <span>&gt; Vytvoř článek</span>
+        </h1>
+    </div>
+    <div class="col-sm-12">
+    <div class="well">
+    {{ form_start(form, {'attr': {'class': 'smart-form'}}) }}
+    {{ form_errors(form) }}
+    <section>
+        <label class="checkbox">
+            {{ form_widget(form.active) }}
+            <i></i>Active</label>
+    </section>
+    <section>
+        {{ form_label(form.Title, 'Title', {'label_attr': {'class': 'label'}}) }}
+        <label class="input">
+            {{ form_widget(form.Title, {'attr': {'class': 'input-sm'}}) }}
+        </label>
+    </section>
+
+    <section>
+        {{ form_label(form.Text, 'Text', {'label_attr': {'class': 'label'}}) }}
+        <label class="input">
+            {{ form_widget(form.Text, {'attr': {'class': 'click2edit'}}) }}
+        </label>
+    </section>
+
+    <section>
+        {{ form_label(form.Tags, 'Tags', {'label_attr': {'class': 'label'}}) }}
+        <label class="input">
+            {{ form_widget(form.Tags, {'attr': {'class': 'input-sm tagsinput','data-role': 'tagsinput'}}) }}
+        </label>
+    </section>
+
+    <section>
+        {{ form_label(form.Url, 'Url', {'label_attr': {'class': 'label'}}) }}
+        <label class="input">
+            {{ form_widget(form.Url, {'attr': {'class': 'input-sm'}}) }}
+        </label>
+    </section>
+
+    <section>
+        {{ form_label(form.Date, 'Date', {'label_attr': {'class': 'label'}}) }}
+        <label class="input">
+            {{ form_widget(form.Date, {'attr': {'class': 'input-sm'}}) }}
+        </label>
+    </section>
+    <footer>
+        {{ form_row(form.save,{'attr': {'class': 'btn btn-primary'}}) }}
+    </footer>
+    {{ form_end(form) }}
+    </div>
+    </div>
+
+
+{% endblock %}

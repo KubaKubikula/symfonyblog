@@ -1,0 +1,293 @@
+*{
+
+    margin:0;
+    padding:0;
+    margin:0px auto;
+}
+
+body{
+    background-color: #fdfdfd;
+    margin:0 !important;
+    padding:0;
+}
+
+#topmenu {
+    background-color: #3a3d40;
+    border-bottom-color: #4a4d50;
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+    height:88px;
+    position:fixed;
+    width:100%;
+    overflow: hidden;
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+#topmenumain{
+    width: 960px;
+
+    display:block;
+}
+
+#menu {
+    float:right;
+}
+#menu ul {
+    list-style-type: none;
+}
+
+#menu li {
+    float:left;
+}
+#menu li a {
+    color: #a5a6a6;
+    text-decoration:none;
+    font-family: Myriad Pro;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left:18px;
+    padding-right:18px;
+    padding-top:50px;
+    padding-bottom:24px;
+    border-left:1px #424547 solid;
+    border-right:1px #2d3032 solid;
+    display:block;
+    transition: 0.4s;
+}
+#menu li a:hover {
+    background-color: #2d3032;
+    color: #637d8d;
+}
+
+
+#mainlogo{
+    background-image:url('./../img/logo.png');
+    background-repeat: no-repeat;
+    width: 88px;
+    height: 48px;
+    float:left;
+    margin-top: 24px;
+    display:block;
+    transition: 0.4s;
+
+}
+
+
+
+
+
+#footer {
+    background-color: #3a3d40;
+    padding-top: 40px;
+    padding-bottom: 35px;
+}
+
+#footer .footerinner {
+    width: 960px;
+}
+#footer .popularposts {
+    width: 220px;
+    float: left;
+    margin-right:27px;
+}
+#footer .twiterposts {
+    width: 220px;
+    float: left;
+    margin-right:27px;
+}
+#footer .aboutme {
+    width: 220px;
+    float: left;
+    margin-right:27px;
+}
+.footerinner h3 {
+    color: #d4d4d4;
+    font-family: Mariad Pro;
+    font-size: 14px;
+    text-transform:uppercase;
+}
+.footerinner p{
+    line-height:25px;
+    padding-top: 20px;
+    padding-bottom: 17px;
+    color:#979898;
+    font-family: Mariad Pro;
+    font-size: 13px;
+
+}
+.footerinner .footerdate{
+    padding-bottom:18px;
+    border-bottom:1px #505255 dotted;
+    color:#899096;
+    font-family: Mariad Pro;
+    font-size: 11px;
+}
+
+.post.second {
+    margin-top: 1px;
+    border-top:1px #505255 dotted;
+}
+
+#footer #contactform {
+    width: 219px;
+    float: left;
+
+}
+
+#contactform input,#contactform textarea {
+    background-color: #27292b;
+}
+
+#contactform input {
+    height: 35px;
+    border:none;
+    margin-bottom:11px;
+    width: 219px;
+}
+
+#contactform input[type=submit] {
+    background-image:url(./../img/buttonfooter.png);
+    width: 112px;
+    height: 31px;
+    border:none;
+    background-color: transparent;
+    color:white;
+    cursor:pointer;
+}
+
+#contactform textarea {
+    height: 140px;
+    border:none;
+    margin-bottom:11px;
+    width: 219px;
+}
+
+#contactform form {
+    padding-top:28px;
+}
+
+
+
+.clear {
+    clear: both;
+}
+
+
+#maincontent .card {
+    width: 306px;
+    float: left;
+    margin-left:9px;
+    margin-right:9px;
+    margin-bottom:18px;
+    border:1px #e8e8e8 solid;
+    background-color: #f7f7f7;
+}
+
+#maincontent .card .content{
+    padding: 20px;
+    padding-bottom: 24px;
+}
+
+#maincontent .card.lastcard {
+    margin-right:0;
+}
+
+
+#maincontent .card .image{
+    height:200px;
+
+    display:block;
+    background-color: #808080;
+}
+#maincontent .card h3 {
+    color: #484848;
+    font-family: Mariad Pro;
+    font-size: 15px;
+}
+
+#maincontent .card p {
+    font-size: 13px;
+    color: #484848;
+    font-family: Mariad Pro;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px #acacac dotted;
+}
+#maincontent .card .footer{
+    border-top:1px #acacac dotted;
+    padding-top: 12px;
+    margin-top: 1px;
+}
+
+#maincontent .card .footer .date{
+    float:left;
+    font-size: 11px;
+    color: #999999;
+    font-family: Mariad Pro;
+    background-image: url('./../../img/calendar.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left:20px;
+    padding-top:1px;
+}
+
+#maincontent .card .footer .chatico{
+    float:right;
+    background-image: url('./../../img/chat.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left:20px;
+    font-size: 11px;
+    color: #999999;
+    font-family: Mariad Pro;
+    padding-top:1px;
+}
+
+#buttonolderposts {
+    padding-top: 24px;
+    padding-bottom: 57px;
+    border-top: 1px #b1b1b1 dotted;
+}
+
+
+#maincontent{
+    width: 978px;
+    padding-top:120px;
+
+}
+
+
+.innercontent{
+    padding-bottom:15px;
+    margin-bottom:1px;
+    border-bottom:1px #b1b1b1 dotted;
+}
+
+.clear {
+    clear: both;
+}
+
+
+input.button{
+    background-image:url(./../../img/button.png);
+    width: 112px;
+    height: 31px;
+    border:none;
+    background-color: none;
+    color:white;
+    cursor:pointer;
+}
+
+@media only screen and (max-width:950px) {
+    /* For tablets: */
+    #maincontent{width:800px;}
+
+
+}
+@media only screen and (max-width:642px) {
+    /* For mobile phones: */
+    #maincontent{width:600px;}
+}
