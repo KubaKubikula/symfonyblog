@@ -22,18 +22,6 @@ use Symfony\Component\HttpFoundation\Request;
 class AdminControler extends AbstractController
 {
 
-    /**
-     *
-     * @Route("/admin")
-     */
-    public function login()
-    {
-
-        return $this->render(
-            'admin/login.html.twig'
-        );
-    }
-
 
     /**
      * @Route("/admin/article/", name = "newArticle")
@@ -43,14 +31,17 @@ class AdminControler extends AbstractController
         $article->setDate(new \DateTime('today'));
 
         $form = $this->createFormBuilder($article)
-            ->add('active', CheckboxType::class)
+            ->add('active', CheckboxType::class,[
+                'label'    => 'Show this entry publicly?',
+                'required' => false,
+            ])
             ->add('Title', TextType::class)
             ->add('Text', TextType::class)
             ->add('Date', DateType::class)
             ->add('Tags', TextType::class)
             ->add('Url', TextType::class)
 
-            ->add('save', SubmitType::class, ['label' => 'Create Article'])
+            ->add('save', SubmitType::class, ['label' => 'Uložit'])
             ->getForm();
 
 
@@ -70,6 +61,9 @@ class AdminControler extends AbstractController
             $this->addFlash('success', 'Článek uložen');
 
             return $this->redirectToRoute('articles');
+        } else {
+            $form->getErrors();
+            die;
         }
 
         return $this->render(
@@ -83,18 +77,22 @@ class AdminControler extends AbstractController
      */
     public function article(Request $request, $id)
     {
-        $article = new Article();
-        $article->setDate(new \DateTime('today'));
+        $entityManager = $this->getDoctrine()->getManager();
+        $article = $entityManager->find('App\Entity\Article', $id);
+
 
         $form = $this->createFormBuilder($article)
-            ->add('active', CheckboxType::class)
+            ->add('active', CheckboxType::class,[
+                'label'    => 'Show this entry publicly?',
+                'required' => false,
+            ])
             ->add('Title', TextType::class)
             ->add('Text', TextareaType::class)
             ->add('Date', DateType::class)
             ->add('Tags', TextType::class)
             ->add('Url', TextType::class)
 
-            ->add('save', SubmitType::class, ['label' => 'Create Article'])
+            ->add('save', SubmitType::class, ['label' => 'Uložit'])
             ->getForm();
 
 
@@ -104,7 +102,6 @@ class AdminControler extends AbstractController
             // $form->getData() holds the submitted values
             // but, the original `$task` variable has also been updated
             $article = $form->getData();
-
             // ... perform some action, such as saving the task to the database
             // for example, if Task is a Doctrine entity, save it!
             $entityManager = $this->getDoctrine()->getManager();

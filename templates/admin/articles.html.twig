@@ -50,8 +50,9 @@
                                     <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Title</th>
-                                        <th>Active</th>
+                                        <th>Titulek</th>
+                                        <th>Aktivní</th>
+                                        <th>Datum</th>
                                         <th></th>
                                     </tr>
                                     </thead>
@@ -61,6 +62,7 @@
                                         <td>{{ article.id }}</td>
                                         <td>{{ article.Title }}</td>
                                         <td>{{ article.active }}</td>
+                                        <td>{{ article.Date|date("m/d/Y") }}</td>
                                         <td><a href="/admin/article/{{ article.id }}">detail</a></td>
                                     </tr>
                                     {% endfor %}
