@@ -1,7 +1,5 @@
 <?php
 
-
-echo "x";
 /**
  * Created by PhpStorm.
  * User: jakubzientek
